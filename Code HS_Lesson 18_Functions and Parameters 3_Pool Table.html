@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Pool Table</title>
+
+	</head>
+		<style>
+			canvas{
+				background-color:gray;
+				margin-left: 374px;
+			}
+		</style>
+
+	<body>
+		<center><h1>Pool Table</h1></center>
+		<hr>
+	<canvas id="myCanvas" height="500px" width="600px"></canvas>
+		<script>
+		var c=document.getElementById("myCanvas");
+
+		function drawCircles(x,y, color, num){
+			
+			var circleBlack=c.getContext("2d");
+			circleBlack.beginPath();
+			circleBlack.arc(x,y,50,0,2*Math.PI);
+			circleBlack.fillStyle=color;
+			circleBlack.stroke();
+			circleBlack.fill();
+
+
+			var circleWhite=c.getContext("2d");
+			circleWhite.beginPath();
+			circleWhite.arc(x-10,y+10,25,0,2*Math.PI);
+			circleWhite.fillStyle="white";
+			circleWhite.stroke();
+			circleWhite.fill();
+			
+			var eight=c.getContext("2d");
+			eight.font="30px Arial";
+			eight.fillStyle = "black";
+			eight.fillText(num,x-20,y+15)
+			
+		}
+
+		drawCircles(100,100,"black", 8);
+		drawCircles(200,400,"blue", 2);
+		drawCircles(100,300,"yellow", 1);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title></title>
+		
+	</head>
+
+	<body>
+			<h1><center>Fibonacci</center></h1>
+			<hr>
+		<a id= "fib"></a>
+		<a id= "fibStart"></a>
+
+		<script>
+			var initial = 0; 
+			var secondary = 1;
+			
+			document.getElementById("fib").innerHTML += initial + "<br>";
+			document.getElementById("fib").innerHTML += secondary + "<br>";	
+
+			while (initial<1000){
+				//Sums the initial and secondary
+				initial= initial+secondary;
+				secondary= secondary+initial;
+
+				document.getElementById("fib").innerHTML += initial + "<br>";
+				document.getElementById("fib").innerHTML += secondary + "<br>";	
+					
+			}
+
+		</script>
+	</body>
+
+
+
+
+	</html>
+	

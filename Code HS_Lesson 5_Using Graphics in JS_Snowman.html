@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title></title>
+			<style>
+			canvas{
+				border-style: solid;
+				background-color: white;
+				margin-left: 29%;
+
+		}
+			h1{
+				text-align: center;
+		}
+		</style>
+		
+		
+	</head>
+
+	<body>
+		<h1><center>Snowman</center></h1>
+		<hr>
+		<canvas id="myCanvas" height="500px" width="500px"></canvas>
+
+		<script>
+		//Coordinate system (x--> horizontal, y--> vertical 0,0--> x,y)
+		//getWidth() --> gets the width of the canvas
+		//getHeight() --> gets the height of the canvas
+			//Canvas text:
+				//var canvas = document.getElementById ("myCanvas");
+				//var ctx = canvas.getContext ("2d");
+				//ctx.font = "30px Arial";
+				//ctx.fillText("Hello World", 10, 50);
+			//Canvas Circle:
+				//var c=document.getElementById("myCanvas");
+				//var ctx=c.getContext("2d");
+				//ctx.beginPath();
+				//ctx.arc(100,75,50,0,2*Math.PI);
+				//ctx.stroke();
+			//Canvas Rectangle:
+				//var c=document.getElementById("myCanvas");
+				//var ctx=c.getContext("2d");
+				//ctx.fillRect(20,20,150,100);
+
+				var c=document.getElementById("myCanvas");
+				var ctxTop=c.getContext("2d");
+				ctxTop.beginPath();
+				ctxTop.arc(250,50,50,0,2*Math.PI);
+				ctxTop.stroke();
+				ctxTop.fillStyle="grey";
+				ctxTop.fill();
+
+				var c=document.getElementById("myCanvas");
+				var ctxMiddle=c.getContext("2d");
+				ctxMiddle.beginPath();
+				ctxMiddle.arc(250,175,75,0,2*Math.PI);
+				ctxMiddle.stroke();
+				ctxMiddle.fillStyle="grey";
+				ctxMiddle.fill();
+
+				var c=document.getElementById("myCanvas");
+				var ctxBottom=c.getContext("2d");
+				ctxBottom.beginPath();
+				ctxBottom.arc(250,375,125,0,2*Math.PI);
+				ctxBottom.stroke();
+				ctxBottom.fillStyle="grey";
+				ctxBottom.fill();
+
+		</script>
+		
+	</body>
+
+
+
+
+	</html>
+	

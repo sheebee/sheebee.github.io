@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		
+	</head>
+	<body style = "background-color:black; color:white;">
+		<script>
+		//Calculator: var first = prompt("First: "); --> var second = prompt("Second: "); --> var sum = first + second; --> document.write(sum);
+		//Arithmetic Operations in JS:
+		//Addition (+)
+		//Subtraction (-)
+		//Multiplication (*)
+		//Division (/)
+		//Modulus? (%) Means divide and take the remainder. What is 17 % 5 --> 17 / 5 = 3 remainder 2 so, 17 % 5 = 2
+		//Examples: var x = 4; var y = 8; --> document.write(x + y); ~ 12 --> document.write(y - x); ~ 4 --> document.write(x * y); ~ 32 --> document.write(y / x); ~ 2
+		//Increment and Decrement: add one or sub. one to a variable ( add one to the counter--> counter = counter + 1; ) Shortcut counter++; (add one (x++;)) (sub. one (x--;))
+		var distance = prompt("How far did you run (miles)? ");
+		var time = prompt("How long did it take you (minutes)? ");
+		var mile = 5280 * distance;
+		var hour = 60 * time; 
+		var totalSpeed = mile/hour; 
+		document.write("Your speed was " + totalSpeed + " mph" );
+		</script>
+	</body>
+</html>

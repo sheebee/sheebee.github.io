@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title></title>
+		<style>
+	div.jumbotron{
+		padding-left: 2%;
+		color: white; 
+
+	}
+	body{
+		background-color: black;
+
+	}
+
+	canvas{
+		background-color: gray;
+		border-style: solid;
+
+	}
+	a{
+		color: white;
+	}
+
+	</style>
+		
+	</head>
+
+	<body>
+		<div class="jumbotron">
+			<h1>Random Color Square</h1>
+		</div>
+		<canvas id = "myCanvas" height="300px" width="300px" onclick="colorCube();"></canvas>
+		<br>
+
+		<script>
+		var c=document.getElementById("myCanvas");
+		
+		function colorCube(){
+		//Declare canvas to be c
+		//declare element 2d object named bon
+		var bob=c.getContext("2d"); //creating a 2D object inside of the canvas
+		bob.rect(c.width/2 - 50, c.height/2 - 50, 100, 100); //x,y,width,height
+		bob.fillStyle= getRandomColor(); //color
+		bob.fill(); //Fills inside of shape
+		bob.stroke(); //outside perameter
+		}
+
+		function getRandomColor() {     
+			var letters = '0123456789ABCDEF'.split('');     
+			var color = '#';     
+			for (var i = 0; i < 6; i++ ) {        
+			 color += letters[Math.floor(Math.random() * 16)];    
+			 }     
+			 return color;
+			}
+
+		</script>
+	</body>
+
+
+
+
+	</html>
+	
