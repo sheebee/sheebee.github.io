@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Is it Prime? (Forms and Modulus)</title>
+		
+	</head>
+
+	<body>
+		<h1><center>Is It Prime?</center></h1>
+		<hr>
+		Is it Prime? <input id="num" type="number" onchange="isItPrime (this.value)"></input>
+		<p id="answer">Prior to being changed by JavaScript</p>
+		<script>
+		function isItPrime(x){
+			//Initialize it as true
+			var prime= true;
+			for(var i = 2; i< x; i++){
+				if (x % i== 0){
+					prime=false;
+					break;
+				}
+			}		
+			//Print verdict
+			if(prime==true){
+				document.getElementById("answer").innerHTML = "It IS prime.";
+			}
+			if(prime==false){
+				document.getElementById("answer").innerHTML = "It is NOT prime.";
+			}
+		}
+		</script>
+	</body>
+
+
+
+
+	</html>
+	
