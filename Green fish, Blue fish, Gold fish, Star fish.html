@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Green fish, Blue fish, Gold fish, Star fish</title>
+		<style>
+			body{
+				background-image: url("http://vivax-metrotechaus.com/wp-content/themes/seba2012/images/bg-water.jpg");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+				color: white;
+				background-size: cover;
+				
+				.one{
+					background-color: #00CCFF;
+				}
+				hr{
+					color: black;
+				}
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<h1 style= "font-size: 300%; color: black;"><center>Green Fish, Blue Fish, Gold Fish, & Patrick Fish</center></h1>
+			<a style="font-size: 150%; color: black;">How Many Fish?</a>
+			<div class= "hr"><hr></div>
+			<input id="fishNum" onchange="fishy(this.value)" type="number">
+			<br>
+			
+			<div class="one">
+				<img src ="http://www.veryicon.com/icon/ico/Cartoon/Fish%20Toys/Green%20Fish.ico" style="top:250px; left: 5%; width:150px;height:150px;"></img><a style="color: black;">I am worth 1</a>
+				
+				<img src = "http://cliparts.co/cliparts/pT7/K8A/pT7K8AXec.png" style= "top:250px; left:30%; width:150; height:150px"></img> <a style="color: black;">I am worth 5</a>
+				
+				
+				<img src = "http://www.clipartbest.com/cliparts/RTG/Gbr/RTGGbreqc.png" style= "top:250px; left: 55%; width:150px;height:150px;"></img><a style="color: black;">I am worth 10</a>
+				
+				<img src = "http://vignette2.wikia.nocookie.net/mobrosstudios/images/7/7e/Patrick_Star.png/revision/latest?cb=20140201080315" style= "top:250px; left: 80%; width:150px;height150px;"></img><a style="color: black;">I am worth 100</a>
+				<br>
+			</div>
+		</div>
+		<br>
+		<div id= "fishies">
+			
+		</div>
+		<!-- start of my JavaScript. -->
+		<script>
+			function fishy(x){
+				document.getElementById("fishies").innerHTML = ""
+				//100 star fish
+				while(x>=100){
+					document.getElementById("fishies").innerHTML += "<img src = 'img src= 'http://vignette2.wikia.nocookie.net/mobrosstudios/images/7/7e/Patrick_Star.png/revision/latest?cb=20140201080315' style= 'top:250px; left: 80%; width:150px;height150px;'></img>";
+						x=x-100;
+						if(x<100){
+							break;
+						}
+				}
+
+				//10 orange fish
+				while(x>=10){
+					document.getElementById("fishies").innerHTML += "<img src= 'http://www.clipartbest.com/cliparts/RTG/Gbr/RTGGbreqc.png' style= 'top:250px; left: 55%; width:150px;height:150px;'></img>";
+						x=x-10;
+						if(x<10){
+							break;
+						}
+				}
+
+
+				//5 blue fish
+				while(x>=5){
+					document.getElementById("fishies").innerHTML += "<img src = 'http://cliparts.co/cliparts/pT7/K8A/pT7K8AXec.png' style= 'top:250px; left:30%; width:150; height:150px'></img>";
+					x=x-5;
+					if(x<5){
+						break;
+					}
+
+				}
+				//1 green fish
+				while(x>=1){
+					document.getElementById("fishies").innerHTML += "<img src ='http://www.veryicon.com/icon/ico/Cartoon/Fish%20Toys/Green%20Fish.ico' style='top:250px; left: 5%; width:150px;height:150px;'></img>";
+					x=x-1;
+					if(x<1){
+						break;
+					}
+				}
+					
+			}
+		</script>
+	</body>
+</html>
